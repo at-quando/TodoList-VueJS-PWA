@@ -8,6 +8,7 @@ import './registerServiceWorker';
 import './assets/styling/scss/styles.scss';
 import filterPlugin from './helpers/filter';
 import directivePlugin from './helpers/directive';
+import VueInstall from 'vue-pwa-install';
 
 import { APIService } from './helpers/services/api.service';
 
@@ -18,6 +19,8 @@ Vue.prototype.$http = api;
 Vue.use(VueI18n);
 Vue.use(directivePlugin);
 Vue.use(filterPlugin);
+Vue.use(VueInstall);
+
 
 new Vue({
   router,

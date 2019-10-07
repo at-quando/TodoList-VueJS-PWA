@@ -24,10 +24,23 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
+import InstallBanner from './layout/InstallBanner.vue';
+import { formStore } from '@/storage/local';
 
-@Component
+type Nullable<T> = T | null;
+type Optional<T> = T | undefined;
+
+@Component({
+  components: {
+    'install-banner': InstallBanner,
+  },
+})
 export default class HelloWorld extends Vue {
   @Prop() private msg!: string;
+
+  test() {
+    formStore.setItem<Optional<Nullable<object>>>('some-form-author', {key: 1, value: 10});
+  }
 }
 </script>
 
