@@ -28,12 +28,8 @@
 
   public created() {
      this.$on('canInstall', (event: BeforeInstallPromptEvent) => {
-       
        // Prevent Chrome >=67 from automatically showing the prompt:
        event.preventDefault();
-
-       console.log(event);
-
        // Stash the event so it can be triggered later:
        this.deferredPrompt = event;
      });
