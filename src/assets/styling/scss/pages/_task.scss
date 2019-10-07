@@ -1,0 +1,36 @@
+.no-post {
+  text-align: center;
+  color: map-get($color, second);
+  .ec-page-search {
+    @include pxRem(font-size, 40);
+  }
+  .no-post-message {
+    @include pxRem(font-size, 10);
+  }
+}
+.task {
+  position: relative;
+  .ec-square-o, .ec-check-square-o {
+    @include pxRem(font-size, 30);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .ec-check-square-o {
+    @include pxRem(left, 2);
+    color: map-get($color, primary);
+  }
+  .content {
+    @include pxRem(font-size, 20);
+    @include pxRem(padding, 20 10% 20 15%);
+    border-bottom: 1px solid #f3f3f3;
+  }
+  .btn-del {
+    @include pxRem(font-size, 30);
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

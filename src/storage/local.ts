@@ -8,6 +8,5 @@ LocalForage.config({
 });
 
 export default LocalForage;
-export const usersStore = LocalForage.createInstance({ name: 'users' });
-export const tasksStore = LocalForage.createInstance({ name: 'tasks' });
+export const dbStore = LocalForage.createInstance({ name: 'db' });
 

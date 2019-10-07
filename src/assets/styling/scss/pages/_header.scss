@@ -25,6 +25,7 @@
 
 @include respond-below(medium)  {
   .page-header {
+    @include pxRem('height', 60);
     display: flex;
     align-items: center;
     flex-grow: 12;
@@ -34,7 +35,6 @@
     z-index: 10;
     background: #fff;
     border-bottom: 1px solid #ededed;
-    height: 60px;
     padding: 0 15px;
     .page-logo {
       flex: 2 0;

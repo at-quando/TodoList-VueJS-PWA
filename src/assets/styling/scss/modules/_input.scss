@@ -1,0 +1,26 @@
+.input-comp {
+  @include pxRem(height, 60);
+  position: relative;
+  .input-task {
+    @include pxRem(padding, 16 50 16 15);
+    @include box-shadow(inset 0 0 8px 4px rgba(0,0,0,.03));
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+    font-style: italic;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .add-btn {
+    @include pxRem(top, 6);
+    @include pxRem('font-size', 30);
+    @include pxRem('padding', 0 10);
+    color: map-get($color, primary);
+    position: absolute;
+    right: 0;
+  }
+}

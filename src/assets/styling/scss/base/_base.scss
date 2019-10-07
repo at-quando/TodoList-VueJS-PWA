@@ -1,3 +1,10 @@
 * {
   box-sizing: border-box;
 }
+body {
+  color: map-get($color, normal);
+}
+.ec {
+  color: map-get($color, second);
+  line-height: 1px; 
+}
