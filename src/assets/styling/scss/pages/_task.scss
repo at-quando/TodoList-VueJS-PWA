@@ -1,6 +1,6 @@
 .no-post {
   text-align: center;
-  color: map-get($color, second);
+  color: map-get($colors, second);
   .ec-page-search {
     @include pxRem(font-size, 40);
   }
@@ -19,7 +19,7 @@
   }
   .ec-check-square-o {
     @include pxRem(left, 2);
-    color: map-get($color, primary);
+    color: map-get($colors, primary);
   }
   .content {
     @include pxRem(font-size, 20);

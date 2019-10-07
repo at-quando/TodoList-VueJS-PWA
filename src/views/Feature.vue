@@ -5,8 +5,8 @@
     <div class="main">
       <InputTask/>
       <ListTask :tasks="tasksConvert"/>
+      <Footer></Footer>
     </div>
-    <!-- <Footer></Footer> -->
   </div>
 </template>
 

@@ -1,22 +1,22 @@
 .page-header {
+  @include pxRem("padding", 15);
   transition: all .3s ease-in-out;
   text-align: center;
-  padding: 15px;
   .logo {
+    @include pxRem("width", 240);
     max-width: 100%;
-    width: 240px;
   }
   .mobile-only {
     display: none;
   }
   .page-title {
-    color: #fff;
+    @include pxRem("font-size", 36);
+    @include pxRem("margin", 20 0);
+    color: map-get($colors, white);
     letter-spacing: .1em;
-    text-shadow: -1px -1px 1px #ededed, 1px 1px 1px #909090;
-    font-size: 36px;
+    text-shadow: -1px -1px 1px map-get($colors, border), 1px 1px 1px map-get($colors, shadow);
     text-align: center;
     text-transform: uppercase;
-    margin: 20px 0;
   }
   .nav-bar {
     display: none;
@@ -26,6 +26,7 @@
 @include respond-below(medium)  {
   .page-header {
     @include pxRem('height', 60);
+    @include pxRem('padding', 0 15);
     display: flex;
     align-items: center;
     flex-grow: 12;
@@ -33,14 +34,13 @@
     width: 100%;
     top: 0;
     z-index: 10;
-    background: #fff;
-    border-bottom: 1px solid #ededed;
-    padding: 0 15px;
+    background: map-get($colors, white);
+    border-bottom: 1px solid map-get($colors, border);
     .page-logo {
       flex: 2 0;
     }
     .logo {
-      width: 2.5rem;
+      @include pxRem('width', 35);
     }
     .desktop-only {
       display: none;
@@ -49,18 +49,18 @@
       display: inherit;
     }
     .page-title {
+      @include pxRem('font-size', 28);
       flex: 8 0;
-      font-size: 2rem;
     }
     .nav-bar {
+      @include pxRem('font-size', 28);
       display: flex;
       flex: 2 0;
-      font-size: 2rem;
       text-align: right;
     }
     .avatar-circle {
+      @include pxRem('width', 35);
       border-radius: 50%;
-      width: 2.5rem;
     }
   }
 }
