@@ -7,6 +7,8 @@
       <ListTask :tasks="tasksConvert"/>
       <Footer></Footer>
     </div>
+    <!-- <Footer></Footer> -->
+    <Sidebar></Sidebar>
   </div>
 </template>
 
@@ -18,6 +20,7 @@
   import ListTask from '@/components/modules/tasks/ListTasks.vue';
   import { dbStore } from '@/storage/local';
   import { Task } from '../helpers/models/task.interface';
+  import Sidebar from '@/components/layout/Sidebar.vue';
 
   type Nullable<T> = T | null;
   type Optional<T> = T | undefined;
@@ -28,6 +31,7 @@
       InputTask,
       ListTask,
       Footer,
+      Sidebar,
     },
   })
   export default class Feature extends Vue {

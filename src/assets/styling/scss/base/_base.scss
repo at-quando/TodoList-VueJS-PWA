@@ -8,6 +8,9 @@ body {
   color: map-get($colors, second);
   line-height: 1px; 
 }
+a:hover {
+  color: map-get($color, primary);
+}
 html {
   background: map-get($colors, bg-page);
 }
