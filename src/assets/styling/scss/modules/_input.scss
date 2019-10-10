@@ -19,7 +19,7 @@
     @include pxRem(top, 6);
     @include pxRem('font-size', 30);
     @include pxRem('padding', 0 10);
-    color: map-get($color, primary);
+    color: map-get($colors, primary);
     position: absolute;
     right: 0;
   }

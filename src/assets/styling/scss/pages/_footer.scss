@@ -1,18 +1,18 @@
 .todos-footer {
+  @include pxRem("padding", 10 15);
+  @include pxRem("height", 50);
   position: relative;
-  padding: 10px 15px;
-  height: 50px;
-  border-top: 1px solid #ededed;
+  border-top: 1px solid map-get($colors, border);
   display: flex;
   align-items: center;
   &::before {
+    @include pxRem("height", 50);
     content: "";
     position: absolute;
     z-index: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    height: 50px;
     overflow: hidden;
     box-shadow: 0 1px 1px rgba(0,0,0,.2), 0 8px 0 -3px #f6f6f6, 0 9px 1px -3px rgba(0,0,0,.2), 0 16px 0 -6px #f6f6f6, 0 17px 2px -6px rgba(0,0,0,.2);
   }
@@ -22,14 +22,14 @@
   flex-grow: 5;
   align-items:center;
   .toolbar-item {
+    @include pxRem("font-size", 12);
     flex: 1 0;
     text-align: center;
     position: relative;
     z-index: 1;
-    font-size: 12px;
     margin: 0;
     &.counter {
-      color: #b7b7b7;
+      color: map-get($colors, p-1);
     }
     &.cleaner {
       text-align: right!important;
@@ -39,21 +39,27 @@
       }
     }
     .toolbar-btn {
+      @include pxRem("padding", 3 8);
+      @include pxRem("border-radius", 3);   
       border: 1px solid transparent;
-      border-radius: 3px;
-      padding: 3px 8px;
       &.active,
       &:hover {
-        border-color: #7bb062;
+        border-color: map-get($colors, primary);
       }
     }
   }
 }
 button:disabled {
-  color: #b7b7b7;
+  color: map-get($colors, p-1);
 }
 
-@include respond-below(wide)  {
+@include respond-below(medium)  {
+  .todos-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
   .todos-footer-toolbar {
     .toolbar-item.counter {
       text-align: left;

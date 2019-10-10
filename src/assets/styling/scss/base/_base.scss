@@ -2,9 +2,12 @@
   box-sizing: border-box;
 }
 body {
-  color: map-get($color, normal);
+  color: map-get($colors, normal);
 }
 .ec {
-  color: map-get($color, second);
+  color: map-get($colors, second);
   line-height: 1px; 
+}
+html {
+  background: map-get($colors, bg-page);
 }
