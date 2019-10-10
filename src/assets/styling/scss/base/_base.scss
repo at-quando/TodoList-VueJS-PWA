@@ -2,12 +2,15 @@
   box-sizing: border-box;
 }
 body {
-  color: map-get($color, normal);
+  color: map-get($colors, normal);
 }
 .ec {
-  color: map-get($color, second);
+  color: map-get($colors, second);
   line-height: 1px; 
 }
 a:hover {
   color: map-get($color, primary);
+}
+html {
+  background: map-get($colors, bg-page);
 }
