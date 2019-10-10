@@ -9,6 +9,7 @@ import './assets/styling/scss/styles.scss';
 import filterPlugin from './helpers/filter';
 import directivePlugin from './helpers/directive';
 import VueInstall from 'vue-pwa-install';
+import './assets/styling/animate.css';
 
 import { APIService } from './helpers/services/api.service';
 

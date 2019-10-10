@@ -9,7 +9,7 @@ body {
   line-height: 1px; 
 }
 a:hover {
-  color: map-get($color, primary);
+  color: map-get($colors, primary);
 }
 html {
   background: map-get($colors, bg-page);

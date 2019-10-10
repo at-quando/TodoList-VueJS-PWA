@@ -1,13 +1,12 @@
 <template>
   <div class="feature">
     <Header></Header>
-    <!-- //main content -->
     <div class="main">
       <InputTask/>
       <ListTask :tasks="tasksConvert"/>
       <Footer></Footer>
     </div>
-    <!-- <Footer></Footer> -->
+    <Footer></Footer>
     <Sidebar></Sidebar>
   </div>
 </template>

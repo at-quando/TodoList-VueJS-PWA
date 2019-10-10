@@ -5,9 +5,15 @@
       <p class="no-post-message">You don't have any task.</p>
     </div>
     <div v-else>
-      <div class="task-item" v-for="(task, index) of tasks" :key="index">
-        <ItemTask :task="task" @removeTask="removeTaskEvent($event)"/>
-      </div>
+      <transition-group
+        name="custom-classes-transition"
+        enter-active-class="animated slideInDown"
+        leave-active-class="animated bounceOutRight"
+      >
+        <div class="task-item" v-for="(task, index) of tasks" :key="index">
+            <ItemTask :task="task" @removeTask="removeTaskEvent($event)"/>
+        </div>
+      </transition-group>
     </div>
   </div>
 </template>
