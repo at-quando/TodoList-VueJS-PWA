@@ -1,5 +1,5 @@
 export default {
-  packs: (state: any) => {
-    return state.packs;
+  listTasks: (state: any, getters: any) => {
+    return state.tasks;
   },
 };

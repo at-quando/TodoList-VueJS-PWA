@@ -26,6 +26,10 @@
     @include pxRem(padding, 20 10% 20 15%);
     border-bottom: 1px solid #f3f3f3;
   }
+  .unactive-content {
+    color: map-get($color, second);
+    text-decoration: line-through;
+  }
   .btn-del {
     @include pxRem(font-size, 30);
     position: absolute;

@@ -16,7 +16,6 @@
   import Header from '@/components/layout/Header.vue';
   import InputTask from '@/components/modules/tasks/InputTask.vue';
   import ListTask from '@/components/modules/tasks/ListTasks.vue';
-  import { dbStore } from '@/storage/local';
   import { Task } from '../helpers/models/task.interface';
 
   type Nullable<T> = T | null;
@@ -32,38 +31,14 @@
   })
   export default class Feature extends Vue {
 
-    private tasksConvert: any = [];
+    // private tasksConvert: any = [];
 
-    private mounted() {
-      this.createTask();
-      this.getTasks();
+    private created() {
+      this.$store.dispatch('listTasks');
     }
 
-    private async createTask() {
-      dbStore.setItem('tasks', []);
-      let task: Task;
-      let task1: Task;
-      task = {
-        id: 1,
-        name: 'asfasf',
-        date: new Date(),
-        type: 0,
-        content: '12312asdfasdfasdfas asd f312312123',
-      };
-      task1 = {
-        id: 2,
-        name: 'asfasdfasfasdfasdfasdfasdfasf',
-        date: new Date(),
-        type: 0,
-        content: '12312312312123',
-      };
-      this.tasksConvert.push(task);
-      this.tasksConvert.push(task1);
-      dbStore.setItem('tasks', this.tasksConvert);
-    }
-
-    private async getTasks() {
-      this.tasksConvert = await dbStore.getItem('tasks');
+    get tasksConvert() {
+      return this.$store.state.tasks;
     }
   }
 </script>

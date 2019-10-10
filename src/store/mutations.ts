@@ -1,5 +1,11 @@
 export default {
-  mutateBooking: (state: any, payload: any) => {
-    state.packs = payload;
+  mutatelistTasks: (state: any, payload: any) => {
+    state.tasks = payload;
+  },
+  mutateremoveTasks: (state: any, payload: any) => {
+    // commit('mutateBooking', payload)
+  },
+  mutateupdateTasks: (state: any, payload: any) => {
+    // commit('mutateBooking', payload)
   },
 };
