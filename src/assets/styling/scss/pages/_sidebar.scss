@@ -1,6 +1,6 @@
 @include respond-below(medium)  {
   .aside-profile {
-    background: map-get($color, white);
+    background: map-get($colors, white);
     position: fixed;
     top: 0;
     right: 0;
@@ -43,7 +43,7 @@
       }
       .user-info {
         .email {
-          color: map-get($color, primary);
+          color: map-get($colors, primary);
         }
       }
     }

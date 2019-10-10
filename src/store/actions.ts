@@ -1,9 +1,13 @@
 import LocalForage from '@/storage/local';
 
 export default {
-  listTasks: ({commit}: any, payload: any) => {
+  listTasks: ({commit}: any, payload = null) => {
     LocalForage.getItem('tasks').then((data: any) => {
-      commit('mutatelistTasks', data);
+      let tasks: any = data ? data : [];
+      if (payload !== null) {
+        tasks = tasks.filter((x: any) => +x.type === payload);
+      }
+      commit('mutatelistTasks', tasks);
     });
   },
   removeTask: ({commit}: any, payload: any) => {
@@ -16,7 +20,6 @@ export default {
     });
   },
   updateTask: ({commit}: any, payload: any) => {
-    // commit('mutateBooking', payload)
     LocalForage.getItem('tasks').then((data) => {
       const tasks: any = data ? data : [];
       const editTaskIndex = tasks.findIndex((x: any) => x.id === payload.id);
@@ -24,6 +27,11 @@ export default {
       LocalForage.setItem('tasks', tasks).then((res) => {
         commit('mutatelistTasks', tasks);
       });
+    });
+  },
+  clearTasks: ({commit}: any, payload: any) => {
+    LocalForage.setItem('tasks', []).then((res) => {
+      commit('mutatelistTasks', []);
     });
   },
   createTask: ({commit}: any, payload: any) => {

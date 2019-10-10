@@ -27,7 +27,7 @@
     border-bottom: 1px solid #f3f3f3;
   }
   .unactive-content {
-    color: map-get($color, second);
+    color: map-get($colors, second);
     text-decoration: line-through;
   }
   .btn-del {
