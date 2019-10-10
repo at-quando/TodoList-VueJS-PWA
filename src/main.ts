@@ -21,7 +21,6 @@ Vue.use(directivePlugin);
 Vue.use(filterPlugin);
 Vue.use(VueInstall);
 
-
 new Vue({
   router,
   i18n,

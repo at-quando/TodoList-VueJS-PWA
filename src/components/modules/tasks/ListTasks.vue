@@ -26,8 +26,8 @@
   export default class ListTask extends Vue {
     @Prop() private tasks!: any;
 
-    private removeTaskEvent(event) {
-      console.log( event);
+    private removeTaskEvent(event: any) {
+      // this.$store.dispatch('createTasks', {});
     }
   }
 </script>

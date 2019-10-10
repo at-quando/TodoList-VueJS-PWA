@@ -8,5 +8,3 @@ LocalForage.config({
 });
 
 export default LocalForage;
-export const dbStore = LocalForage.createInstance({ name: 'db' });
-
