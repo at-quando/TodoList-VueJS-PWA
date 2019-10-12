@@ -28,9 +28,17 @@
         }
       }
       .user-info {
+        position: relative;
+        width: calc(90% - 50px);
         .email {
           color: map-get($colors, primary);
         }
+      }
+      .btn-close-panel {
+        @include pxRem("font-size", 25);
+        @include pxRem("top", 5);
+        @include pxRem("right", 5);
+        position: absolute;
       }
     }
   }
