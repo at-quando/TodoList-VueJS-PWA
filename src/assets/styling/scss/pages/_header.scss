@@ -55,6 +55,7 @@
     .nav-bar {
       @include pxRem('font-size', 28);
       display: flex;
+      justify-content: flex-end;
       flex: 2 0;
       text-align: right;
     }

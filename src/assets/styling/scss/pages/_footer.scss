@@ -73,3 +73,23 @@ button:disabled {
     }
   }
 }
+@include respond-below(small)  {
+  .todos-footer-toolbar {
+    .toolbar-item {
+      @include pxRem("font-size", 8);
+      .toolbar-btn {
+        background: none;
+        border: 0;
+      }
+      &.cleaner {
+        button {
+          background: none;
+        }
+      }
+      &.counter,
+      &.cleaner {
+        flex: 1 0;
+      }
+    }
+  }
+}

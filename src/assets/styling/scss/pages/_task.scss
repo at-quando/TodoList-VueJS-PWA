@@ -38,3 +38,18 @@
     transform: translateY(-50%);
   }
 }
+
+@include respond-below(small)  {
+  .task {
+    .ec-check-square-o,
+    .ec-square-o {
+      @include pxRem(font-size, 20);
+    }
+    .content {
+      @include pxRem(font-size, 16);
+    }
+    .ec-cancel {
+      @include pxRem(font-size, 24);
+    }
+  }
+}

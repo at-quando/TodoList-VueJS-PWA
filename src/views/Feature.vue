@@ -1,13 +1,17 @@
 <template>
   <div class="feature">
-    <Header></Header>
+    <Header @openSidebar="sidebarControl($event)" @closeSidebar="sidebarControl($event)"></Header>
     <div class="main">
       <InputTask/>
       <ListTask :tasks="tasksConvert"/>
       <Footer></Footer>
     </div>
-    <Footer></Footer>
-    <Sidebar></Sidebar>
+    <transition
+      name="sidebar-transition"
+      enter-active-class="animated slideInRight"
+      leave-active-class="animated slideOutRight">
+      <Sidebar v-if="isSidebar"></Sidebar>
+    </transition>
   </div>
 </template>
 
@@ -35,6 +39,7 @@
   export default class Feature extends Vue {
 
     // private tasksConvert: any = [];
+    private isSidebar: boolean = false;
 
     private created() {
       this.$store.dispatch('listTasks');
@@ -42,6 +47,10 @@
 
     get tasksConvert() {
       return this.$store.state.tasks;
+    }
+
+    private sidebarControl(event: any) {
+      this.isSidebar = event;
     }
   }
 </script>

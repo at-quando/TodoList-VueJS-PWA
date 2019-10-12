@@ -31,3 +31,11 @@
     }
   }
 }
+
+@include respond-below(small) {
+  .input-comp {
+    .ec-file-add {
+      @include pxRem(font-size, 24);
+    }
+  }
+}
