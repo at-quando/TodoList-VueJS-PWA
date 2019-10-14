@@ -14,11 +14,9 @@
 
   @Component
   export default class Header extends Vue {
-    isSidebar: Boolean = false;
 
-    openSidebar() {
-      this.isSidebar = true;
-      this.$emit('openSidebar', this.isSidebar);
+    private openSidebar() {
+      this.$emit('openSidebar', true);
     }
   }
 </script>

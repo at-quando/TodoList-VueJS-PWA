@@ -3,14 +3,14 @@
     <Header @openSidebar="sidebarControl($event)" @closeSidebar="sidebarControl($event)"></Header>
     <div class="main">
       <InputTask/>
-      <ListTask :tasks="tasksConvert"/>
+      <ListTask/>
       <Footer></Footer>
     </div>
     <transition
       name="sidebar-transition"
       enter-active-class="animated slideInRight"
       leave-active-class="animated slideOutRight">
-      <Sidebar v-if="isSidebar"></Sidebar>
+      <Sidebar v-if="isSidebar" @closeSidebar="sidebarControl($event)"></Sidebar>
     </transition>
   </div>
 </template>
@@ -43,10 +43,6 @@
 
     private created() {
       this.$store.dispatch('listTasks');
-    }
-
-    get tasksConvert() {
-      return this.$store.state.tasks;
     }
 
     private sidebarControl(event: any) {

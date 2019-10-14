@@ -1,5 +1,5 @@
 <template>
-  <aside class="aside-profile" v-if="!hideSidebar">
+  <aside class="aside-profile">
     <ul class="menu-list">
       <li class="menu-item">
         <div class="profile-avatar"><img src="https://lh3.googleusercontent.com/a-/AAuE7mAb0P68bHfZdRaxwnqZmyH4J0dUZ1Vkimd0qiz0" alt="Phuc Le"></div>
@@ -22,11 +22,8 @@
 
   @Component
   export default class Sidebar extends Vue {
-    hideSidebar: Boolean = false;
-
-    closeSidebar() {
-      this.hideSidebar = true;
-      this.$emit('closeSidebar', this.hideSidebar);
+    private closeSidebar() {
+      this.$emit('closeSidebar', false);
     }
   }
 </script>

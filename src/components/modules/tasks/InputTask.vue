@@ -1,6 +1,6 @@
 <template>
   <div class="input-comp">
-    <input class="input-task" v-model="task.content" placeholder="What need to be done?">
+    <input class="input-task" v-model="task.content" placeholder="What you need to be done?">
     <button class="add-btn btn-no-border" :disabled="!task.content" @click="addTask()"><i class="ec ec-file-add"></i></button>
   </div>
 </template>

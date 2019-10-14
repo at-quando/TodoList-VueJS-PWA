@@ -1,0 +1,9 @@
+.update-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  display: none;
+  background-color: map-get($colors, primary);
+}
