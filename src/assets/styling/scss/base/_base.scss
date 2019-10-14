@@ -14,3 +14,10 @@ a:hover {
 html {
   background: map-get($colors, bg-page);
 }
+
+@include respond-below(medium)  {
+  body,
+  html {
+    background: map-get($colors, white);
+  }
+}
