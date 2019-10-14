@@ -1,0 +1,39 @@
+.login {
+  width: 80%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  .logo {
+    @include pxRem("width", 90);
+  }
+  .title {
+    @include pxRem("font-size", 24);
+    font-weight: 400;
+  }
+  .login-btn {
+    @include pxRem("margin-top", 50);
+    @include pxRem("font-size", 18);
+    @include pxRem("padding", 10);
+    @include pxRem("margin", 10 0);
+    border: 1px solid map-get($colors, primary);
+    background: map-get($colors, white);
+    color: map-get($colors, shadow);
+    width: 100%;
+    cursor: pointer;
+    text-align: left;
+    font-weight: 300;
+  }
+  .login-btn:disabled {
+    border-color: map-get($colors, disabled)!important;
+    color: map-get($colors, border);
+    cursor: not-allowed;
+  }
+}
+
+@include respond-above(medium)  {
+  .login {
+    @include pxRem("width", 400);
+  }
+}

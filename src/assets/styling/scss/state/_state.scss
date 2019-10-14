@@ -1,0 +1,6 @@
+.text-center {
+  text-align: center;
+}
+.mt-30 {
+  @include pxRem("margin-top", 30);
+}
