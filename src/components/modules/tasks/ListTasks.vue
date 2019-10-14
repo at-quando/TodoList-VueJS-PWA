@@ -10,8 +10,8 @@
         enter-active-class="animated slideInDown"
         leave-active-class="animated bounceOutRight"
       >
-        <div class="task-item" v-for="(task, index) of tasks" :key="index">
-            <ItemTask :task="task" @removeTask="removeTaskEvent($event)"/>
+        <div class="task-item" v-for="(task, index) of tasks" :key="`a${index}`">
+          <ItemTask :task="task" @removeTask="removeTaskEvent($event)"/>
         </div>
       </transition-group>
     </div>

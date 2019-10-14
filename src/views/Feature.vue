@@ -10,7 +10,7 @@
       name="sidebar-transition"
       enter-active-class="animated slideInRight"
       leave-active-class="animated slideOutRight">
-      <Sidebar v-if="isSidebar"></Sidebar>
+      <Sidebar v-if="isSidebar" @closeSidebar="sidebarControl($event)"></Sidebar>
     </transition>
   </div>
 </template>
