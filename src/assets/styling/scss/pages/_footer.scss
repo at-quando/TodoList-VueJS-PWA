@@ -46,6 +46,8 @@
       &.active,
       &:hover {
         border-color: map-get($colors, primary);
+        color: map-get($colors, primary);
+        outline-color: unset;
       }
     }
   }

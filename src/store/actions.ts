@@ -25,7 +25,7 @@ export default {
       const editTaskIndex = tasks.findIndex((x: any) => x.id === payload.id);
       tasks[editTaskIndex] = payload;
       LocalForage.setItem('tasks', tasks).then((res) => {
-        commit('mutatelistTasks', tasks);
+        commit('mutateupdateTasks', payload);
       });
     });
   },
