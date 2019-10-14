@@ -3,7 +3,7 @@
     <Header @openSidebar="sidebarControl($event)" @closeSidebar="sidebarControl($event)"></Header>
     <div class="main">
       <InputTask/>
-      <ListTask :tasks="tasksConvert"/>
+      <ListTask/>
       <Footer></Footer>
     </div>
     <transition
@@ -43,10 +43,6 @@
 
     private created() {
       this.$store.dispatch('listTasks');
-    }
-
-    get tasksConvert() {
-      return this.$store.state.tasks;
     }
 
     private sidebarControl(event: any) {

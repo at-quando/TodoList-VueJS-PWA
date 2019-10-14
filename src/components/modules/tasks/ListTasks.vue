@@ -1,16 +1,15 @@
 <template>
   <div class="list-tasks container">
-    <div class="no-post" v-if="!tasks || tasks.length === 0">
+    <div class="no-post" v-if="!tasksConvert || tasksConvert.length === 0">
       <i class="ec ec-page-search"></i>
       <p class="no-post-message">You don't have any task.</p>
     </div>
     <div v-else>
       <transition-group
-        name="custom-classes-transition"
-        enter-active-class="animated slideInDown"
-        leave-active-class="animated bounceOutRight"
+        name="transition-item"
+        tag="div"
       >
-        <div class="task-item" v-for="(task, index) of tasks" :key="`a${index}`">
+        <div class="task-item" v-for="task in tasksConvert" :key="task.id">
           <ItemTask :task="task" @removeTask="removeTaskEvent($event)"/>
         </div>
       </transition-group>
@@ -30,10 +29,25 @@
   })
 
   export default class ListTask extends Vue {
-    @Prop() private tasks!: any;
 
-    private removeTaskEvent(event: any) {
-      // this.$store.dispatch('createTasks', {});
+    get tasksConvert() {
+      return this.$store.state.tasks;
     }
   }
 </script>
+<style>
+.transition-item-enter-active, .transition-item-leave-active {
+  transition: all 0.5s;
+}
+.transition-item-enter {
+  transform: translateY(-20px);
+}
+.transition-item-enter-to, .transition-item-leave {
+  opacity: 1;
+  position: relative;
+}
+.transition-item-leave-to {
+  transform: translateX(500px);
+}
+
+</style>

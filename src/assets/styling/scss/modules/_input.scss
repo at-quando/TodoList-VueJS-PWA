@@ -16,7 +16,7 @@
     -moz-osx-font-smoothing: grayscale;
   }
   .add-btn {
-    @include pxRem(top, 6);
+    @include pxRem(top, 10);
     @include pxRem('font-size', 30);
     @include pxRem('padding', 0 10);
     position: absolute;

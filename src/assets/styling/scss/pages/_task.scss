@@ -8,6 +8,10 @@
     @include pxRem(font-size, 10);
   }
 }
+.list-tasks {
+  overflow-x: hidden;
+  @include pxRem("padding-bottom", 50);
+}
 .task {
   position: relative;
   .ec-square-o, .ec-check-square-o {
