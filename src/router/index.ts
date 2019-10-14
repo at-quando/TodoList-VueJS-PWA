@@ -9,12 +9,16 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
+      path: '/',
+      redirect: '/auth',
+    },
+    {
       path: '/auth',
       name: 'auth',
       component: () => import(/* webpackChunkName: "auth" */ '../views/Auth.vue'),
     },
     {
-      path: '/',
+      path: '/feature',
       name: 'feature',
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
