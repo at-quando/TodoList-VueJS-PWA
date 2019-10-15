@@ -1,7 +1,11 @@
 <template>
   <div class="task" :class="[task.type ? 'unactive-content' : '']">
     <span><i class="ec" :class="[task.type ? 'ec-check-square-o' : 'ec-square-o']" @click="tickTask()"></i></span>
-    <p class="content">{{task.content}}</p>
+    <div class="content-box">
+      <p class="content">{{task.content}}
+      </p>
+      <small>{{task.date}}</small>
+    </div>
     <button class="btn-no-border btn-del" @click="remove()"><i class="ec ec-bin"></i></button>
   </div>
 </template>
