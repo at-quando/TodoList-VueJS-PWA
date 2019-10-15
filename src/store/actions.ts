@@ -30,10 +30,13 @@ export default {
     });
   },
   clearTasks: ({commit}: any, payload: any) => {
-    LocalForage.setItem('tasks', []).then((res) => {
-      commit('mutatelistTasks', []);
-    })
-    .catch((e: any) => console.log(e));
+    LocalForage.getItem('tasks').then((data) => {
+      let tasks: any = data ? data : [];
+      tasks = tasks.filter((x: any) => !x.type);
+      LocalForage.setItem('tasks', tasks).then((res) => {
+        commit('mutatelistTasks', tasks);
+      });
+    });
   },
   createTask: ({commit}: any, payload: any) => {
     LocalForage.getItem('tasks').then((data) => {
@@ -41,7 +44,7 @@ export default {
       payload.id = tasks.slice(-1)[0] ? tasks.slice(-1)[0].id + 1 : 1;
       LocalForage.setItem('tasks', [...tasks, payload]).then((res) => {
         commit('mutatelistTasks', [...tasks, payload]);
-      }).catch((e: any) => console.log(e));
+      });
     });
   },
 };

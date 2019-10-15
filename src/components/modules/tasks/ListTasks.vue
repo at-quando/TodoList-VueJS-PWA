@@ -1,7 +1,7 @@
 <template>
   <div class="list-tasks container">
     <div class="no-post" v-if="!tasksConvert || tasksConvert.length === 0">
-      <i class="ec ec-page-search"></i>
+      <i class="ec ec-paperclip"></i>
       <p class="no-post-message">You don't have any task.</p>
     </div>
     <div v-else>

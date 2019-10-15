@@ -1,4 +1,7 @@
 .todos-footer {
+  @include respond-above(medium)  {
+    @include pxRem("height", 80);
+  }
   @include pxRem("padding", 10 15);
   @include pxRem("height", 50);
   background-color: white;
@@ -29,11 +32,13 @@
     position: relative;
     z-index: 1;
     margin: 0;
+    strong {
+      @include pxRem("font-size", 25);   
+    }
     &.counter {
       color: map-get($colors, p-1);
     }
     &.cleaner {
-      text-align: right!important;
       button {
         margin: 0;
         border: 0;
@@ -64,12 +69,6 @@ button:disabled {
     right: 0;
   }
   .todos-footer-toolbar {
-    .toolbar-item.counter {
-      text-align: left;
-    }
-    .toolbar-item.cleaner {
-      text-align: right;
-    }
     .toolbar-item.counter,
     .toolbar-item.cleaner {
       flex: 2 0;

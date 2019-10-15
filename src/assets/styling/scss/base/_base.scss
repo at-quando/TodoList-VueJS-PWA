@@ -2,7 +2,10 @@
   box-sizing: border-box;
 }
 body {
+  font-family: 'Arial';
   color: map-get($colors, normal);
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 .ec {
   color: map-get($colors, second);
@@ -19,5 +22,11 @@ html {
   body,
   html {
     background: map-get($colors, white);
+  }
+}
+
+@include respond-above(medium)  {
+  .page-title {
+    display: none;
   }
 }

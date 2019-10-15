@@ -11,22 +11,21 @@
     width: 100%;
     font-size: 1rem;
     border: none;
-    font-style: italic;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
   .add-btn {
-    @include pxRem(top, 10);
+    @include pxRem(top, 7);
     @include pxRem('font-size', 30);
     @include pxRem('padding', 0 10);
     position: absolute;
     right: 0;
     &:disabled {
-      .ec-file-add {
+      .ec-attachment {
         color: map-get($colors, second);
       }
     }
-    .ec-file-add {
+    .ec-attachment {
       color: map-get($colors, primary);
     }
   }
@@ -34,8 +33,8 @@
 
 @include respond-below(small) {
   .input-comp {
-    .ec-file-add {
-      @include pxRem(font-size, 24);
+    .ec-attachment {
+      @include pxRem(font-size, 30);
     }
   }
 }

@@ -1,7 +1,7 @@
 .no-post {
   text-align: center;
   color: map-get($colors, second);
-  .ec-page-search {
+  .ec-paperclip {
     @include pxRem(font-size, 40);
   }
   .no-post-message {
@@ -30,16 +30,22 @@
     @include pxRem(padding, 20 10% 20 15%);
     border-bottom: 1px solid #f3f3f3;
   }
-  .unactive-content {
-    color: map-get($colors, second);
-    text-decoration: line-through;
-  }
   .btn-del {
     @include pxRem(font-size, 30);
     position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+  }
+}
+
+.unactive-content {
+  .content {
+    color: map-get($colors, second);
+    text-decoration: line-through;
+  }
+  .ec-bin {
+    color: grey;
   }
 }
 
@@ -52,7 +58,7 @@
     .content {
       @include pxRem(font-size, 16);
     }
-    .ec-cancel {
+    .ec-bin {
       @include pxRem(font-size, 24);
     }
   }

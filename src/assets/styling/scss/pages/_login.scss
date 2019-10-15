@@ -17,17 +17,16 @@
     @include pxRem("font-size", 18);
     @include pxRem("padding", 10);
     @include pxRem("margin", 10 0);
-    border: 1px solid map-get($colors, primary);
-    background: map-get($colors, white);
-    color: map-get($colors, shadow);
+    border-radius: 5px;
+    background-color: map-get($colors, primary);
+    color: map-get($colors, white);
+    text-align: center;
     width: 100%;
     cursor: pointer;
-    text-align: left;
     font-weight: 300;
   }
   .login-btn:disabled {
-    border-color: map-get($colors, disabled)!important;
-    color: map-get($colors, border);
+    opacity: 0.7;
     cursor: not-allowed;
   }
 }

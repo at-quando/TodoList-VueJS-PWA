@@ -1,8 +1,8 @@
 <template>
-  <div class="task">
+  <div class="task" :class="[task.type ? 'unactive-content' : '']">
     <span><i class="ec" :class="[task.type ? 'ec-check-square-o' : 'ec-square-o']" @click="tickTask()"></i></span>
-    <p class="content" :class="[task.type ? 'unactive-content' : '']">{{task.content}}</p>
-    <button class="btn-no-border btn-del" @click="remove()"><i class="ec ec-cancel"></i></button>
+    <p class="content">{{task.content}}</p>
+    <button class="btn-no-border btn-del" @click="remove()"><i class="ec ec-bin"></i></button>
   </div>
 </template>
 
