@@ -14,6 +14,7 @@
 }
 .task {
   position: relative;
+  border-bottom: 1px solid #f3f3f3;
   .ec-square-o, .ec-check-square-o {
     @include pxRem(font-size, 30);
     position: absolute;
@@ -25,10 +26,16 @@
     @include pxRem(left, 2);
     color: map-get($colors, primary);
   }
-  .content {
-    @include pxRem(font-size, 20);
+  .content-box {
     @include pxRem(padding, 20 10% 20 15%);
-    border-bottom: 1px solid #f3f3f3;
+    .content {
+      @include pxRem(font-size, 16);
+      @include pxRem('line-height', 22);
+    }
+    small {
+      @include pxRem('font-size', 12);
+      color: map-get($colors, second);
+    }
   }
   .btn-del {
     @include pxRem(font-size, 30);

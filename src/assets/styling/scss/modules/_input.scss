@@ -2,17 +2,27 @@
   @include pxRem(height, 60);
   position: relative;
   .input-task {
-    @include pxRem(padding, 16 50 16 15);
+    @include pxRem(padding, 16 50 16 40);
     @include box-shadow(inset 0 0 8px 4px rgba(0,0,0,.03));
     position: absolute;
     top: 0;
     left: 0;
-    margin: 0;
     width: 100%;
+    margin: 0;
     font-size: 1rem;
     border: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+  .btn-calendar {
+    @include pxRem(top, 10);
+    @include pxRem(left, 5);
+    position: absolute;
+    z-index: 10;
+    i {
+      @include pxRem('font-size', 25);
+      color: grey;
+    }
   }
   .add-btn {
     @include pxRem(top, 7);
@@ -37,4 +47,7 @@
       @include pxRem(font-size, 30);
     }
   }
+}
+.vdpWithInput {
+  @include pxRem(margin-top, 40);
 }

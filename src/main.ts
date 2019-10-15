@@ -10,6 +10,7 @@ import filterPlugin from './helpers/filter';
 import directivePlugin from './helpers/directive';
 import VueInstall from 'vue-pwa-install';
 import './assets/styling/animate.css';
+import 'vue-date-pick/dist/vueDatePick.css';
 
 import { APIService } from './helpers/services/api.service';
 
