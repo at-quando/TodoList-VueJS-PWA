@@ -75,6 +75,11 @@ button:disabled {
     }
   }
 }
+
+.toolbar-btn {
+  background: none;
+}
+
 @include respond-below(small)  {
   .todos-footer-toolbar {
     .toolbar-item {

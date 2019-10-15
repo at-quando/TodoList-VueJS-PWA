@@ -3,30 +3,30 @@
     <ul class="todos-footer-toolbar">
       <li class="toolbar-item counter">
         <strong class="n-counter">{{countTasksLeft}}</strong>
-        <p>task(s) left</p>
+        <p>{{ $t('feature.taskLeft') }}</p>
       </li>
       <li class="toolbar-item">
         <button class="toolbar-btn" :class="{ active: toggleActive(1) }" @click="filterTasks(1)">
           <strong class="ec-papers"></strong>
-          <p>All Tasks</p>
+          <p>{{ $t('feature.allTasks') }}</p>
         </button>
       </li>
       <li class="toolbar-item">
         <button class="toolbar-btn" :class="{ active: toggleActive(2) }" @click="filterTasks(2, 0)">
           <strong class="ec-ebook"></strong>
-          <p>Active</p>
+          <p>{{ $t('feature.active') }}</p>
         </button>
       </li>
       <li class="toolbar-item">
         <button class="toolbar-btn" :class="{ active: toggleActive(3) }" @click="filterTasks(3, 1)">
           <strong class="ec-check-clipboard-1"></strong>
-          <p>Completed</p>
+          <p>{{ $t('feature.completed') }}</p>
         </button>
       </li>
       <li class="toolbar-item cleaner">
         <button class="toolbar-btn" :disabled="countTasks === 0" @click="clearTasks()">
           <strong class="ec-database-remove"></strong>
-          <p>Clear</p>
+          <p>{{ $t('feature.clear') }}</p>
         </button>
       </li>
     </ul>

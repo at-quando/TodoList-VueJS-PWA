@@ -2,14 +2,15 @@
   <div class="input-comp">
     <label class="btn-calendar" for="datepick"><i  class="ec ec-calendar"></i></label>
     <date-pick v-datePickerId v-model="task.date" :pickTime="true" :format="format"></date-pick>
-    <input class="input-task" v-model="task.content" placeholder="What need to be done?">
+    <input class="input-task" v-model="task.content" :placeholder="$t('feature.inputPlaceholder')">
     <button class="add-btn btn-no-border" :disabled="!task.content" @click="addTask()"><i class="ec ec-attachment"></i></button>
   </div>
 </template>
 
 <script lang="ts">
   import { Component, Vue } from 'vue-property-decorator';
-  import DatePick from 'vue-date-pick';
+  // tslint:disable-next-line
+  import DatePick from 'vue-date-pick/src/vueDatePick.vue';
   import { Task } from '../../../helpers/models/task.interface';
   import moment from 'moment';
 
