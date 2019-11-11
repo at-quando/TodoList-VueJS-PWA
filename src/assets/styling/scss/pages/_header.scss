@@ -2,6 +2,7 @@
   @include pxRem("padding", 15);
   transition: all .3s ease-in-out;
   text-align: center;
+  background: map-get($colors, bg-header);
   .logo {
     @include pxRem("width", 240);
     max-width: 100%;
@@ -35,7 +36,6 @@
     z-index: 10;
     left: 0;
     right: 0;
-    background: map-get($colors, white);
     border-bottom: 1px solid map-get($colors, border);
     .page-logo {
       flex: 2 0;
@@ -52,6 +52,8 @@
     .page-title {
       @include pxRem('font-size', 28);
       flex: 8 0;
+      font-weight: normal;
+      text-transform: capitalize;
     }
     .nav-bar {
       @include pxRem('font-size', 28);

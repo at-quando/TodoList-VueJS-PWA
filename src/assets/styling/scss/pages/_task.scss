@@ -9,27 +9,26 @@
   }
 }
 .list-tasks {
-  overflow-x: hidden;
   @include pxRem("padding-bottom", 50);
+  overflow-x: hidden;
 }
 .task {
+  @include pxRem("margin-bottom", 5);
+  @include pxRem("padding", 10);
   position: relative;
-  border-bottom: 1px solid #f3f3f3;
+  background: map-get($colors, white);
+  display: flex;
+  align-items: center;
   .ec-square-o, .ec-check-square-o {
-    @include pxRem(font-size, 30);
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    @include pxRem("font-size", 30);
+    @include pxRem("margin-right", 10);
   }
   .ec-check-square-o {
     @include pxRem(left, 2);
-    color: map-get($colors, primary);
   }
   .content-box {
-    @include pxRem(padding, 20 10% 20 15%);
     .content {
-      @include pxRem(font-size, 16);
+      @include pxRem("font-size", 16);
       @include pxRem('line-height', 22);
     }
     small {
@@ -38,17 +37,12 @@
     }
   }
   .btn-del {
-    @include pxRem(font-size, 30);
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    @include pxRem("font-size", 30);
   }
 }
 
 .unactive-content {
   .content {
-    color: map-get($colors, second);
     text-decoration: line-through;
   }
   .ec-bin {
@@ -60,13 +54,13 @@
   .task {
     .ec-check-square-o,
     .ec-square-o {
-      @include pxRem(font-size, 20);
+      @include pxRem("font-size", 20);
     }
     .content {
-      @include pxRem(font-size, 16);
+      @include pxRem("font-size", 16);
     }
     .ec-bin {
-      @include pxRem(font-size, 24);
+      @include pxRem("font-size", 20);
     }
   }
 }

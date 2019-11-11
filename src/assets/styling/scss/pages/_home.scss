@@ -4,10 +4,12 @@
   background: map-get($colors, white);
   position: relative;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.2), 0 25px 50px 0 rgba(0,0,0,.1);
+  background-image: linear-gradient(to right top, #6faf8c, #90bd8e, #b3cb92, #d6d79a, #f9e3a7);
+  color: map-get($colors, main-color);
 }
 @include respond-below(medium)  {
   .main {
-    @include pxRem("padding-top", 60);
+    @include pxRem("padding-top", 80);
     width: 100%;
     min-height: 100vh;
   }
