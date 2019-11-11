@@ -36,7 +36,7 @@
       @include pxRem("font-size", 20);   
     }
     &.counter {
-      color: map-get($colors, p-1);
+      color: map-get($colors, p-2);
     }
     &.cleaner {
       button {
@@ -50,6 +50,10 @@
       border: 1px solid transparent;
       color: map-get($colors, white);
       outline: 0;
+      &.active,
+      &:hover {
+        color: map-get($colors, p-2);
+      }
     }
   }
 }

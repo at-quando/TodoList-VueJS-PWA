@@ -1,6 +1,9 @@
 .input-comp {
   @include pxRem(height, 60);
   position: relative;
+  .icon-plus {
+    color: map-get($colors, white);
+  }
   .input-task {
     @include pxRem(padding, 16 50 16 57);
     @include box-shadow(inset 0 0 8px 4px rgba(0,0,0,.03));
@@ -30,20 +33,23 @@
     }
   }
   .add-btn {
-    @include pxRem(top, 7);
+    @include pxRem(top, 4);
     @include pxRem('font-size', 30);
     @include pxRem('padding', 0 10);
     position: absolute;
     right: 0;
     &:disabled {
-      .ec-attachment {
-        color: map-get($colors, second);
+      .icon-plus {
+        color: map-get($colors, white);
       }
     }
-    .ec-attachment {
-      color: map-get($colors, white);
+    .icon-plus {
+      color: map-get($colors, p-2);
     }
   }
+}
+.vdpClearInput {
+  display: none;
 }
 
 @include respond-below(small) {

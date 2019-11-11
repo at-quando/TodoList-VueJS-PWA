@@ -25,6 +25,7 @@
   }
   .ec-check-square-o {
     @include pxRem(left, 2);
+    color: map-get($colors, p-2);
   }
   .content-box {
     .content {
@@ -33,11 +34,12 @@
     }
     small {
       @include pxRem('font-size', 12);
-      color: map-get($colors, second);
+      color: map-get($colors, main-color);
     }
   }
   .btn-del {
     @include pxRem("font-size", 30);
+    margin-left: auto;
   }
 }
 

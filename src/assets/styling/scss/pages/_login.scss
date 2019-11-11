@@ -19,7 +19,7 @@
     @include pxRem("margin", 10 0);
     border-radius: 5px;
     border-color: unset;
-    background-color: map-get($colors, primary);
+    background-color: map-get($colors, bg-header);
     color: map-get($colors, white);
     text-align: center;
     width: 100%;
@@ -30,6 +30,7 @@
       opacity: 0.7;
     }
     &:disabled {
+      background-image: linear-gradient(to right top, #6faf8c, #90bd8e, #b3cb92, #d6d79a, #f9e3a7);
       opacity: 0.7;
       cursor: not-allowed;
     }
