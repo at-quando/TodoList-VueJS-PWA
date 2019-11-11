@@ -4,7 +4,7 @@
   }
   @include pxRem("padding", 10 15);
   @include pxRem("height", 50);
-  background-color: white;
+  background-color: map-get($colors, bg-header);
   position: relative;
   border-top: 1px solid map-get($colors, border);
   display: flex;
@@ -33,7 +33,7 @@
     z-index: 1;
     margin: 0;
     strong {
-      @include pxRem("font-size", 25);   
+      @include pxRem("font-size", 20);   
     }
     &.counter {
       color: map-get($colors, p-1);
@@ -48,12 +48,8 @@
       @include pxRem("padding", 3 8);
       @include pxRem("border-radius", 3);   
       border: 1px solid transparent;
-      &.active,
-      &:hover {
-        border-color: map-get($colors, primary);
-        color: map-get($colors, primary);
-        outline-color: unset;
-      }
+      color: map-get($colors, white);
+      outline: 0;
     }
   }
 }
