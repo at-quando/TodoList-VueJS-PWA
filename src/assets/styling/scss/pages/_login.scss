@@ -31,6 +31,7 @@
     cursor: pointer;
     font-weight: 300;
     transition: all 0.4s;
+    outline: 0;
     &:active,
     &:hover {
       background-color: map-get($colors, green);
