@@ -41,9 +41,9 @@
   .add-btn {
     @include pxRem('font-size', 30);
     @include pxRem('padding', 0 10);
+    @include pxRem('top', 2);
     position: absolute;
     right: 0;
-    top: 0;
     &:disabled {
       .icon-plus {
         color: map-get($colors, green);
