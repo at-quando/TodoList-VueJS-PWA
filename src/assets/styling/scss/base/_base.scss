@@ -8,7 +8,7 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 .ec {
-  color: map-get($colors, second);
+  color: map-get($colors, main-color);
   line-height: 1px; 
 }
 a:hover {

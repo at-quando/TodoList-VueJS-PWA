@@ -13,18 +13,24 @@
   overflow-x: hidden;
 }
 .task {
-  @include pxRem("margin-bottom", 5);
+  @include pxRem("margin-bottom", 10);
   @include pxRem("padding", 10);
+  @include pxRem("border-radius", 10);
   position: relative;
   background: map-get($colors, white);
+  color: map-get($colors, green);
   display: flex;
   align-items: center;
+  border: solid 1px map-get($colors, border);
+  transition: box-shadow .4s;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.06);
   .ec-square-o, .ec-check-square-o {
     @include pxRem("font-size", 30);
     @include pxRem("margin-right", 10);
   }
   .ec-check-square-o {
     @include pxRem(left, 2);
+    color: map-get($colors, green);
   }
   .content-box {
     .content {
@@ -33,20 +39,22 @@
     }
     small {
       @include pxRem('font-size', 12);
-      color: map-get($colors, second);
+      color: map-get($colors, main-color);
     }
   }
   .btn-del {
     @include pxRem("font-size", 30);
+    margin-left: auto;
   }
 }
 
 .unactive-content {
   .content {
     text-decoration: line-through;
+    color: map-get($colors, green);
   }
   .ec-bin {
-    color: grey;
+    color: map-get($colors, green);
   }
 }
 

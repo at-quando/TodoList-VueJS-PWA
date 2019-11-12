@@ -4,12 +4,29 @@
   background: map-get($colors, white);
   position: relative;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.2), 0 25px 50px 0 rgba(0,0,0,.1);
-  background-image: linear-gradient(to right top, #6faf8c, #90bd8e, #b3cb92, #d6d79a, #f9e3a7);
   color: map-get($colors, main-color);
+  background: url("../../logo/bg.svg") no-repeat bottom;
+  background-size: cover;
+  .main-detail {
+    @include pxRem("border-radius", 20 20 0 0);
+    @include pxRem("padding-top", 20);
+    background: map-get($colors, white);
+    height: 100vh;
+  }
 }
 @include respond-below(medium)  {
+  .feature,
+  .todos {
+    height: 100vh;
+    overflow: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
   .main {
-    @include pxRem("padding-top", 80);
+    @include pxRem("padding-top", 70);
     width: 100%;
     min-height: 100vh;
   }

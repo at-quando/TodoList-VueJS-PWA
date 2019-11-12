@@ -1,10 +1,12 @@
 <template>
   <div class="feature">
     <Header @openSidebar="sidebarControl($event)" @closeSidebar="sidebarControl($event)"></Header>
-    <div class="main container">
-      <InputTask/>
-      <ListTask/>
-      <Footer></Footer>
+    <div class="main">
+      <div class="main-detail container">
+        <InputTask/>
+        <ListTask/>
+        <Footer></Footer>
+      </div>
     </div>
     <transition
       name="sidebar-transition"

@@ -1,9 +1,9 @@
 <template>
   <section class="login">
-    <div class="text-center">
+    <div class="main-login text-center">
       <section>
-        <img alt="FUA PWA" class="logo" src="@/assets/logo/logo-2x.png">
-        <h1 class="title">{{ $t('auth.welcome') }}</h1>
+        <img alt="FUA PWA" class="logo" src="@/assets/logo/logo.png">
+        <!-- <h1 class="title">{{ $t('auth.welcome') }}</h1> -->
       </section>
       <section class="mt-30">
         <button class="login-btn" @click="loginGmail()">{{ $t('auth.google') }}</button>
