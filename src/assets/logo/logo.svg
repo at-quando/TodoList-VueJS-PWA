@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128px" height="128px" viewBox="0 0 128 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2" transform="translate(1.000000, 1.000000)">
+            <g id="Group">
+                <circle id="Oval" stroke="#80E1D1" stroke-width="0.9" fill="#FFFFFF" cx="63" cy="63" r="63"></circle>
+                <text id="To-Do" font-family="SVN-SupercellMagic, SVN-Supercell Magic" font-size="22.5" font-weight="700" fill="#80E1D1">
+                    <tspan x="18.9" y="53.9">To Do</tspan>
+                </text>
+                <text id="LIST" font-family="SVN-SupercellMagic, SVN-Supercell Magic" font-size="34" font-weight="700" fill="#80E1D1">
+                    <tspan x="18" y="96.7">LIST</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -4,7 +4,7 @@
   }
   @include pxRem("padding", 10 15);
   @include pxRem("height", 50);
-  background-color: map-get($colors, bg-header);
+  background-color: map-get($colors, white);
   position: relative;
   border-top: 1px solid map-get($colors, border);
   display: flex;
@@ -48,11 +48,11 @@
       @include pxRem("padding", 3 8);
       @include pxRem("border-radius", 3);   
       border: 1px solid transparent;
-      color: map-get($colors, white);
+      color: map-get($colors, main-color);
       outline: 0;
       &.active,
       &:hover {
-        color: map-get($colors, p-2);
+        color: map-get($colors, green);
       }
     }
   }
