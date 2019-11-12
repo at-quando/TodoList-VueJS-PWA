@@ -4,7 +4,7 @@ import Home from '../views/Home.vue';
 
 Vue.use(Router);
 
-export default new Router({
+const router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
@@ -27,3 +27,20 @@ export default new Router({
     },
   ],
 });
+
+router.beforeEach((to, from, next) => {
+  if (to.path.split('/')[1] === 'auth') {
+    if (localStorage.getItem('ACCESS_TOKEN')) {
+      next({path: '/feature'});
+    } else {
+      next();
+    }
+  } else {
+    if (localStorage.getItem('ACCESS_TOKEN')) {
+      next();
+    } else {
+      next({path: '/auth'});
+    }
+  }
+});
+export default router;
