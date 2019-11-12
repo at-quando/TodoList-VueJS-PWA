@@ -1,7 +1,7 @@
 <template>
   <header class="page-header">
     <a class="page-logo" href="/">
-      <img alt="FUA PWA" class="logo desktop-only" src="@/assets/logo/logo-1x.png">
+      <img alt="FUA PWA" class="logo desktop-only" src="@/assets/logo/logo.png">
       <img alt="FUA PWA" class="logo mobile-only" src="@/assets/logo/logo.png">
     </a>
     <h1 class="page-title"> Todos </h1>
