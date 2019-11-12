@@ -6,7 +6,16 @@ interface ServerResponse {
 
 export class APIService {
   constructor() {
-    axios.defaults.baseURL = 'https://jsonplaceholder.typicode.com/';
+    axios.defaults.baseURL = 'https://us-central1-todo-list-pwa-6f02f.cloudfunctions.net/app/';
+    axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
+    axios.defaults.headers.common['Access-Control-Allow-Methods'] = 'GET,POST,OPTIONS';
+    axios.defaults.headers.common['Access-Control-Allow-Headers'] = 'Content-Type';
+    axios.interceptors.request.use((request) => {
+      request.headers['access-token'] = localStorage.getItem('ACCESS_TOKEN');
+      return request;
+    }, (error) => {
+      return Promise.reject(error);
+    });
     axios.interceptors.response.use(
       (response) => response,
       (error) => {
@@ -38,7 +47,7 @@ export class APIService {
   public post(uri: string[], data = {}) {
     return new Promise((resolve, reject) => {
       axios.post(this.createURL(uri), data)
-        .then((resp: ServerResponse) => {
+        .then((resp: any) => {
           resolve(resp.data);
         })
         .catch((err: any) => {
