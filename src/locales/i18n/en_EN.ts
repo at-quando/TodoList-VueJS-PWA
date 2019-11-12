@@ -1,8 +1,9 @@
 export default {
   auth: {
     welcome: 'Welcome to Todos PWA',
-    google: 'Sign up with Google',
-    guest: 'Sign up with Guest',
+    google: 'Sign in with Google',
+    facebook: 'Sign in with Facebook',
+    guest: 'Sign in with Guest',
   },
   feature: {
     inputPlaceholder: ' What need to be done?',

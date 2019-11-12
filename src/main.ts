@@ -12,12 +12,18 @@ import VueInstall from 'vue-pwa-install';
 import './assets/styling/animate.css';
 import 'vue-date-pick/dist/vueDatePick.css';
 
+
 import { APIService } from './helpers/services/api.service';
+import { FirebaseService } from './helpers/services/firebase.service';
 
 const api = new APIService();
+const firebase = new FirebaseService();
 
 Vue.config.productionTip = false;
 Vue.prototype.$http = api;
+Vue.prototype.$firebase = firebase;
+
+
 Vue.use(VueI18n);
 Vue.use(directivePlugin);
 Vue.use(filterPlugin);
