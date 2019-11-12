@@ -35,7 +35,15 @@
     }
 
     private loginFacebook() {
-      this.$firebase.createProviderFacebook();
+      this.$firebase.createProviderFacebook().then((res: any) => {
+        const user = new User(res);
+        this.$http.post(['users', 'register', res.additionalUserInfo.profile.id], user).then((resApi: any) => {
+          localStorage.setItem('ACCESS_TOKEN', res.credential.accessToken);
+          localStorage.setItem('ID_TOKEN', res.credential.idToken);
+          this.$store.dispatch('showMe');
+          this.$router.push('/feature');
+        });
+      });;
     }
   }
 </script>
