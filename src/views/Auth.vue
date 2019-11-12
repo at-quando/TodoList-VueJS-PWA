@@ -8,7 +8,7 @@
       <section class="mt-30">
         <button class="login-btn" @click="loginGmail()">{{ $t('auth.google') }}</button>
         <button class="login-btn" @click="loginFacebook()">{{ $t('auth.facebook') }}</button>
-        <router-link tag="button" :to="{ path: '/feature' }" class="login-btn"> {{ $t('auth.guest') }}</router-link>
+        <!-- <router-link tag="button" :to="{ path: '/feature' }" class="login-btn"> {{ $t('auth.guest') }}</router-link> -->
       </section>
     </div>
   </section>

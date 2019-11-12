@@ -24,7 +24,7 @@
         </button>
       </li>
       <li class="toolbar-item cleaner">
-        <button class="toolbar-btn" :disabled="countTasks === 0" @click="clearTasks()">
+        <button class="toolbar-btn" disabled @click="clearTasks()">
           <strong class="ec-database-remove"></strong>
           <p>{{ $t('feature.clear') }}</p>
         </button>

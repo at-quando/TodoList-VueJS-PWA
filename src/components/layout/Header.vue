@@ -24,7 +24,7 @@
       this.$emit('openSidebar', true);
     }
 
-     get currentUser() {
+    get currentUser() {
       return this.$store.state.currentUser;
     }
   }
