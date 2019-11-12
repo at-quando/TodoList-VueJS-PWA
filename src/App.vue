@@ -4,7 +4,7 @@
       <p>Do you want to install Foo App?</p>
       <button @click="promptInstall()">Opt for!</button>
     </div>
-    <div v-if="!loading">
+    <div v-show="!loading">
       <router-view/>
     </div>
   </div>

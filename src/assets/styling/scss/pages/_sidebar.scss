@@ -10,6 +10,7 @@
     .menu-list {
       text-align: left;
       .menu-item {
+        color: grey;
         @include pxRem("padding", 10);
         display: flex;
         flex-flow: row wrap;
