@@ -25,24 +25,31 @@
     private loginGmail() {
       this.$firebase.createProviderGmail().then((res: any) => {
         const user = new User(res);
-        this.$http.post(['users', 'register', res.additionalUserInfo.profile.id], user).then((resApi: any) => {
-          localStorage.setItem('ACCESS_TOKEN', res.credential.accessToken);
-          localStorage.setItem('ID_TOKEN', res.credential.idToken);
-          this.$store.dispatch('showMe');
-          this.$router.push('/feature');
-        });
+        this.registerUser(res, user);
+      });
+    }
+
+    private registerUser(res: any, user: any) {
+      this.$http.post(['users', 'register', res.additionalUserInfo.profile.id], user).then((resApi: any) => {
+        localStorage.setItem('ACCESS_TOKEN', res.credential.accessToken);
+        localStorage.setItem('ID_TOKEN', res.credential.idToken);
+        this.$store.dispatch('showMe');
+        this.$router.push('/feature');
       });
     }
 
     private loginFacebook() {
       this.$firebase.createProviderFacebook().then((res: any) => {
-        const user = new User(res);
-        this.$http.post(['users', 'register', res.additionalUserInfo.profile.id], user).then((resApi: any) => {
-          localStorage.setItem('ACCESS_TOKEN', res.credential.accessToken);
-          localStorage.setItem('ID_TOKEN', res.credential.idToken);
-          this.$store.dispatch('showMe');
-          this.$router.push('/feature');
-        });
+        const result = res;
+        result.additionalUserInfo.profile.picture = res.additionalUserInfo.profile.picture.data.url;
+        const user = new User(result);
+        this.registerUser(result, user);
+        // this.$http.post(['users', 'register', res.additionalUserInfo.profile.id], user).then((resApi: any) => {
+        //   localStorage.setItem('ACCESS_TOKEN', res.credential.accessToken);
+        //   localStorage.setItem('ID_TOKEN', res.credential.idToken);
+        //   this.$store.dispatch('showMe');
+        //   this.$router.push('/feature');
+        // });
       });;
     }
   }

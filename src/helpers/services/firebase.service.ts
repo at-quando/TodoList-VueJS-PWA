@@ -10,7 +10,7 @@ import 'firebase/firestore';
 
 
 export class FirebaseService {
-  public a: string;
+  public firebaseOpt: any;
   constructor() {
     const firebaseConfig = {
       apiKey: 'AIzaSyDaJ1lt9_cAL4uZwv3qEP9nsBhd3c4G-NU',
@@ -22,9 +22,9 @@ export class FirebaseService {
       appId: '1:44403035980:web:411269eb6073512bdd09e9',
       measurementId: 'G-VNHDRX2DLN',
     };
-    this.a = '1234124';
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
+    this.firebaseOpt = firebase;
   }
 
   public createProviderGmail() {

@@ -3,7 +3,7 @@
     <ul class="menu-list">
       <li class="menu-item">
         <div class="profile-avatar"><img :src="currentUser.picture" alt="Phuc Le"></div>
-        <div class="user-info"><h6 class="name">Phuc Le</h6><span class="email">{{currentUser.email}}</span></div>
+        <div class="user-info"><h6 class="name">{{currentUser.name}}</h6><span class="email">{{currentUser.email}}</span></div>
         <!-- <a class="btn-close-panel" @click="closeSidebar()">X</a> -->
         <i class="btn-close-panel ec ec-cancel" @click="closeSidebar()"></i>
       </li>

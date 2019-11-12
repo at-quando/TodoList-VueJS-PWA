@@ -7,8 +7,7 @@
     <h1 class="page-title"> Todos </h1>
     <span class="nav-bar" @click="openSidebar()">
       <a>
-        <img class="avatar-circle" v-if="!currentUser" src="https://lh3.googleusercontent.com/a-/AAuE7mAb0P68bHfZdRaxwnqZmyH4J0dUZ1Vkimd0qiz0" alt="Guest">
-        <img class="avatar-circle" v-else :src="currentUser.picture " :alt="currentUser.name">
+        <img class="avatar-circle" :src="currentUser.picture || 'https://lh3.googleusercontent.com/a-/AAuE7mAb0P68bHfZdRaxwnqZmyH4J0dUZ1Vkimd0qiz0'" :alt="currentUser.name">
       </a>
     </span>
   </header>
