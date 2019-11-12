@@ -9,6 +9,8 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     tasks: [],
+    loading: false,
+    currentUser: null,
   },
   actions,
   getters,
